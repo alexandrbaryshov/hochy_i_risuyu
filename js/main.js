@@ -1,4 +1,4 @@
-/* Сенсорика: наполнение страницы из data/site.js */
+/* Хочу и рисую: наполнение страницы из data/site.js */
 (function () {
   "use strict";
   // Единица макета: 1/2752 ширины окна без полосы прокрутки
@@ -88,7 +88,7 @@
   // Цена позиции прайса: «5 000 ₽» или диапазон «1 500–5 000 ₽»
   function priceOf(it) {
     if (!it || !it.price) return TBD;
-    return it.priceTo ? rub(it.price).replace(/\s₽$/, "") + "–" + rub(it.priceTo) : rub(it.price);
+    return it.priceTo ? rub(it.price).replace(/\s₽$/, "") + "–" + rub(it.priceTo) : (it.priceFrom ? "от " : "") + rub(it.price);
   }
   function val(v) { return v == null || v === "" ? TBD : esc(v); }
 

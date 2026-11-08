@@ -12,3 +12,11 @@ Thumbs.db
 desktop.ini
 .vscode/
 *.log
+
+# Локальные настройки и секреты
+.env
+.env.*
+!.env.example
+node_modules/
+*.pem
+*.key
